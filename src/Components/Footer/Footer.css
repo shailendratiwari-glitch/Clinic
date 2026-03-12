@@ -1,0 +1,149 @@
+:root {
+  --footer-bg: #0f172a;
+  --footer-text: #94a3b8;
+  --footer-white: #ffffff;
+  --footer-accent: #3b82f6;
+  --footer-border: #1e293b;
+}
+
+.footer-container {
+  background-color: var(--footer-bg);
+  color: var(--footer-text);
+  padding: 80px 20px 30px 20px;
+  font-family: 'Inter', sans-serif;
+}
+
+.footer-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.footer-col {
+  flex: 1;
+  min-width: 250px;
+}
+
+/* Logo Section */
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.logo-box {
+  background-color: var(--footer-accent);
+  color: white;
+  padding: 8px;
+  border-radius: 8px;
+  display: flex;
+}
+
+.logo-text {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--footer-white);
+}
+
+.footer-bio {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* Titles */
+.footer-title {
+  color: var(--footer-white);
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 25px;
+  position: relative;
+}
+
+/* Links & Lists */
+.footer-links {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin-bottom: 12px;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: var(--footer-text);
+  font-size: 0.9rem;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: var(--footer-accent);
+}
+
+/* Hours Section */
+.hours-list .hour-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  margin-bottom: 12px;
+}
+
+.hour-row b {
+  color: var(--footer-white);
+}
+
+.emergency {
+  color: #f87171;
+}
+
+/* Contact Section */
+.contact-item {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 15px;
+  font-size: 0.9rem;
+}
+
+.icon-blue {
+  color: var(--footer-accent);
+}
+
+/* Social Media */
+.social-links {
+  display: flex;
+  gap: 15px;
+}
+
+.social-links a {
+  color: var(--footer-text);
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: var(--footer-accent);
+  transform: translateY(-3px);
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  max-width: 1200px;
+  margin: 60px auto 0 auto;
+  padding-top: 30px;
+  border-top: 1px solid var(--footer-border);
+  text-align: center;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Responsive Tablet/Mobile */
+@media (max-width: 768px) {
+  .footer-wrapper {
+    flex-direction: column;
+  }
+}

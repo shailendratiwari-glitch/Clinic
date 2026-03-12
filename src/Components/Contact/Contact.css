@@ -1,0 +1,123 @@
+.appointment-section {
+  padding: 60px 20px;
+  background-color: #f1f5f9;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.appointment-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.appointment-header h1 {
+  font-size: 2.2rem;
+  color: #1e293b;
+  margin-bottom: 10px;
+}
+
+.appointment-header p {
+  color: #64748b;
+}
+
+.appointment-card {
+  background: white;
+  width: 100%;
+  max-width: 800px;
+  padding: 40px;
+  border-radius: 24px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e2e8f0;
+}
+
+.form-row {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.form-input-group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-input-group label {
+    
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #475569;
+}
+
+.form-input-group input, 
+.form-input-group select, 
+.form-input-group textarea {
+  padding: 12px 16px;
+  border: 2px solid #f1f5f9;
+  border-radius: 12px;
+  
+  font-size: 1rem;
+  background-color: #79aaf3;
+  transition: all 0.3s ease;
+}
+
+.form-input-group input:focus, 
+.form-input-group select:focus {
+  outline: none;
+  border-color: #3b82f6;
+  background-color: rgb(49, 41, 75);
+  box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.1);
+}
+
+.booking-btn {
+  width: 100%;
+  margin-top: 20px;
+  padding: 16px;
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.booking-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(37, 99, 235, 0.2);
+}
+
+/* Success State Styles */
+.booking-success {
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.success-icon {
+  color: #10b981;
+  margin-bottom: 20px;
+}
+
+.btn-reset {
+  margin-top: 20px;
+  background: none;
+  border: 2px solid #3b82f6;
+  color: #3b82f6;
+  padding: 10px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  .form-row {
+    flex-direction: column;
+  }
+}

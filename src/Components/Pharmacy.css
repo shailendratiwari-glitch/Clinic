@@ -1,0 +1,125 @@
+/* Registration Form Styling - Modernized */
+:root {
+  --primary: #4f46e5;
+  --primary-hover: #4338ca;
+  --bg-subtle: #f8fafc;
+  --border-color: #e2e8f0;
+  --text-main: #1e293b;
+  --text-muted: #64748b;
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.1);
+  --shadow-md: 0 10px 25px -5px rgba(0,0,0,0.05);
+}
+
+.add-item-card {
+  background: #ffffff;
+  padding: 32px;
+  border-radius: 20px;
+  border: 1px solid var(--border-color);
+  margin-bottom: 30px;
+  box-shadow: var(--shadow-md);
+  transition: transform 0.2s ease;
+}
+
+/* Subtle lift on hover */
+.add-item-card:hover {
+  transform: translateY(-2px);
+}
+
+.add-item-card h3 {
+  margin-top: 0;
+  margin-bottom: 24px;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-main);
+  letter-spacing: -0.025em;
+}
+
+.add-item-form {
+  display: flex;
+  gap: 16px;
+  align-items: flex-end; /* Keeps button aligned if inputs vary */
+}
+
+.add-item-form input {
+  flex: 2;
+  padding: 14px 16px;
+  border: 2px solid transparent; /* Prevents jumping on focus */
+  background-color: var(--bg-subtle);
+  border-radius: 12px;
+  font-size: 0.95rem;
+  color: var(--text-main);
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.add-item-form input::placeholder {
+  color: var(--text-muted);
+}
+
+.add-item-form input[type="number"] {
+  flex: 0.8; /* Slightly narrower for quantity */
+}
+
+.add-item-form input:focus {
+  outline: none;
+  border-color: var(--primary);
+  background-color: #fff;
+  box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.1);
+}
+
+.add-submit-btn {
+  flex: 1;
+  background: var(--primary);
+  color: white;
+  border: none;
+  padding: 14px;
+  border-radius: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: all 0.2s ease;
+}
+
+.add-submit-btn:hover {
+  background: var(--primary-hover);
+  box-shadow: 0 4px 12px rgba(79, 70, 229, 0.3);
+}
+
+.add-submit-btn:active {
+  transform: scale(0.98);
+}
+
+/* Row Styling Enhancements */
+.low-label {
+  background: #fef2f2;
+  color: #dc2626;
+  font-size: 0.7rem;
+  padding: 4px 8px;
+  border-radius: 6px;
+  margin-left: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  border: 1px solid rgba(220, 38, 38, 0.1);
+}
+
+.text-right { text-align: right; }
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .add-item-card {
+    padding: 20px;
+  }
+  
+  .add-item-form {
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .add-item-form input, 
+  .add-submit-btn {
+    width: 100%;
+    flex: none;
+  }
+}
