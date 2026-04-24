@@ -1,0 +1,142 @@
+.clinic-navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px); /* The Glassmorphism effect */
+  border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+  padding: 0.75rem 0;
+  transition: all 0.3s ease;
+}
+
+.nav-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logo Styling */
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+}
+
+.logo-container {
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  color: white;
+  padding: 8px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.brand-name {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #1e293b;
+  letter-spacing: -0.5px;
+}
+
+.brand-accent {
+  color: #2563eb;
+}
+
+/* Menu Layout */
+.nav-menu {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  background: #f1f5f9;
+  padding: 6px;
+  border-radius: 50px; /* Capsule shape */
+}
+
+/* Common Item Styles */
+.menu-item, .portal-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 18px;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border: none;
+  cursor: pointer;
+  background: transparent;
+  color: #64748b;
+}
+
+/* Active State for Home */
+.item-active {
+  background: white;
+  color: #2563eb;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* Pharmacy Button Special Styling */
+.portal-button {
+  color: #2563eb;
+}
+
+.portal-active {
+  background: #2563eb;
+  color: white !important;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+}
+
+.nav-divider {
+  width: 1px;
+  height: 24px;
+  background: #cbd5e1;
+  margin: 0 4px;
+}
+
+/* Hover Effects */
+.menu-item:hover:not(.item-active) {
+  color: #1e293b;
+  background: rgba(255,255,255,0.5);
+}
+
+.portal-button:hover:not(.portal-active) {
+  background: rgba(37, 99, 235, 0.1);
+}
+
+@media (max-width: 768px) {
+  .nav-wrapper {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1rem;
+    padding: 0 1rem;
+  }
+
+  .nav-menu {
+    justify-content: space-between;
+    width: 100%;
+    padding: 12px;
+  }
+
+  .nav-logo {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .menu-item,
+  .portal-button {
+    flex: 1 1 auto;
+    padding: 10px 14px;
+    font-size: 0.9rem;
+  }
+
+  .nav-divider {
+    display: none;
+  }
+}
